@@ -1,0 +1,25 @@
+### Crear categoría
+POST http://localhost:3000/categories
+Content-Type: application/json
+
+{
+  "name": "Electrónica",
+  "description": "Dispositivos y gadgets tecnológicos"
+}
+
+### Obtener todas las categorías
+GET http://localhost:3000/categories
+
+### Obtener categoría por id
+GET http://localhost:3000/categories/1
+
+### Actualizar categoría
+PATCH http://localhost:3000/categories/1
+Content-Type: application/json
+
+{
+  "description": "Electrónicos y accesorios"
+}
+
+### Eliminar categoría
+DELETE http://localhost:3000/categories/1
