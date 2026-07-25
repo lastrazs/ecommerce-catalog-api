@@ -1,0 +1,67 @@
+### Crear categoría
+POST http://localhost:3000/categories
+Content-Type: application/json
+
+{
+  "name": "Mecanica",
+  "description": "Dispositivos y gadgets tecnológicos"
+}
+
+### Crear producto
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Laptop Lenovo",
+  "description": "Laptop para trabajo y estudio",
+  "price": 899.99,
+  "stock": 10,
+  "categoryId": 2
+}
+### Obtener productos
+GET http://localhost:3000/products
+
+### Obtener producto por id
+GET http://localhost:3000/products/1
+
+### Actualizar producto
+PATCH http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "price": 849.99,
+  "stock": 8
+}
+
+### Cambiar categoría
+PATCH http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "categoryId": 4
+}
+
+### Eliminar producto
+DELETE http://localhost:3000/products/1
+
+### Categoría inexistente
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Producto inválido",
+  "price": 10,
+  "stock": 2,
+  "categoryId": 999
+}
+
+### Datos inválidos
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "A",
+  "price": -5,
+  "stock": -1,
+  "categoryId": 0
+}
